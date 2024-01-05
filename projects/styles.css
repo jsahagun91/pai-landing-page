@@ -12,6 +12,7 @@ body {
     /* height: 100%; */
     flex-direction: column;
     display: flex;
+    line-height: 1.6; /* Adjust the value to increase or decrease the spacing */
 }
 
 .browser-window {
