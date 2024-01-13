@@ -132,6 +132,10 @@ body {
     flex-wrap: wrap;
 }
 
+a:visited {
+    color: #000;
+}
+
 /* Media query for mobile devices  */
 @media screen and (max-width: 768px) {
     .container {
