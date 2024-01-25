@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anybody">
     <link rel="stylesheet" href="styles.css">
     <title>pai labs</title>
+
 </head>
 
 <body>
@@ -50,6 +51,13 @@
     <div class="panda">
         <img src="panda.png" alt="panda">
     </div>  
+
+    <script>
+        document.querySelector('.panda img').addEventListener('click', function() {
+        this.classList.add('shaking');
+        setTimeout(() => this.classList.remove('shaking'), 820); // The duration should match your CSS animation
+    });
+    </script>
 </body>
 
 </html>
