@@ -130,6 +130,17 @@ a:visited {
     color: black;
 }
 
+.pricing-card {
+    background-color: #999999;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+}
+
 /* Media query for mobile devices  */
 @media screen and (max-width: 768px) {
     .container {
