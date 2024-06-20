@@ -12,7 +12,6 @@ body {
     /* height: 100%; */
     flex-direction: column;
     display: flex;
-    overflow-y: hidden;
 }
 
 .browser-window {
