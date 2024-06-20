@@ -11,8 +11,7 @@
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anybody">
     <link rel="stylesheet" href="styles.css">
-    <title>pai labs</title>
-
+    <title>pai labs | Videos</title>
 </head>
 
 <body>
@@ -25,21 +24,10 @@
             </div>
         </div>
         <div class="container">
-            <div class="logo">
-                <img src="pai-logo-v1.png" alt="pai-logo">
-            </div>
-            <div class="button-container">
-                <a href="/about/" class="button">About Us</a>
-            </div>
-            <div class="button-container">
-                <a href="/projects/" class="button">Projects</a>
-            </div>
-            <div class="button-container">
-                <a href="/tools/" class="button">Tools</a>
-            </div>
-            <div class="button-container">
-                <a href="https://www.instagram.com/pailabs.io/" class="button">Instagram</a>
-            </div>
+                <h1>Videos</h1>
+                <h3><a href="https://website.novatosoccer.com/competitive">05/2024 | North Marin United </a></h3>
+                <h3><a href="https://www.youtube.com/watch?v=JH0Hq3zPkCE">05/2024 | Music Lyric Video for Victoria La Mala</h3>
+                <h3><a href="https://www.instagram.com/reel/C4OsF8VrWLn/">2024 | Eden SF Prints & Embroidery </h3>
             <div class="button-container">
                 <a href="mailto:jose@pailabs.io" class="button">Contact Us</a>
             </div>
@@ -60,15 +48,25 @@
         </div>
     </div> -->
     <div class="panda">
-        <img src="panda.png" alt="panda">
+        <a href="/"><img src="../panda.png" alt="panda"></a>
     </div>  
-
-    <script>
-        document.querySelector('.panda img').addEventListener('click', function() {
-        this.classList.add('shaking');
-        setTimeout(() => this.classList.remove('shaking'), 820); // The duration should match your CSS animation
-    });
-    </script>
 </body>
+<style>
+    
+    a {
+        color: black;
+        text-decoration: none;
+    }
 
+    a:hover {
+        text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+        h3 {
+            font-size: .75rem;
+        }
+    }
+
+</style>
 </html>
