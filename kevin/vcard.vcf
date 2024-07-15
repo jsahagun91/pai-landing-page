@@ -2,13 +2,13 @@ BEGIN:VCARD
 VERSION:3.0
 FN;CHARSET=UTF-8:Kevin Dagnino
 N;CHARSET=UTF-8:Dagnino;Kevin;;
-EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:kevin@ayawaskasf.com
+EMAIL;CHARSET=UTF-8;type=EMAIL,INTERNET:kevin@ayawaskasf.com
 TEL;TYPE=CELL:415-726-7273
 LABEL;CHARSET=UTF-8;TYPE=WORK:Ayawaska
 ADR;CHARSET=UTF-8;TYPE=WORK:;;850 Lamont Ave;Novato;CA;94945;
 TITLE;CHARSET=UTF-8:Owner
 ORG;CHARSET=UTF-8:Ayawaska
 URL;type=WORK;CHARSET=UTF-8:https://ayawaskasf.com/
-PHOTO;VALUE=url:https://pailabs.io/assets/ayawaska-profile.png
+PHOTO;VALUE=uri:https://pailabs.io/assets/ayawaska-profile.png
 REV:2024-03-21T18:22:50.561Z
 END:VCARD
