@@ -120,13 +120,8 @@ body {
 
     .browser-window {
         margin: 15px;
+        margin-top: 100px;
     }
-
-    /* .browser-window2 {
-        margin: 15px;
-        top: 300px;
-        left: 25px;
-    } */
 
     .logo img {
         width: 125px;
