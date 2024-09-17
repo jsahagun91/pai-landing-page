@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://fav.farm/🐼" />
+    <meta property="og:title" content="pai Labs | Lum₿erHawks" />
+    <meta property='og:description' content="pai labs. Web Development. Web Design and SEO" />
+    <meta property="og:url" content="https://www.www.pailabs.io" />
+    <meta property="og:image" content="https://www.pailabs.io/assets/lumberhawk.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anybody">
+    <link rel="stylesheet" href="/lumberhawk/styles.css">
+    <title>Lum₿erHawk</title>
+</head>
+
+<body>
+    <div class="browser-window">
+        <div class="browser-header">
+            <div class="browser-buttons">
+                <span class="browser-button blue"></span>
+                <span class="browser-button green"></span>
+                <span class="browser-button yellow"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="digner">
+                <img src="/assets/lumberhawk.jpg" alt="Lum₿erHawk image">
+            </div>
+        <h2>Lum₿erHawk</h2>
+            <div class="button-container">
+                <a href="https://x.com/LumberHawk" class="button">
+                    X
+                </a>
+            </div>
+            <div class="button-container">
+                <a href="https://lumberhawknews.substack.com/" class="button">Newsletter</a>
+            </div>
+            <div class="button-container">
+                <button class="button" onclick="copyToClipboard()">npub</button>
+            </div>
+            <!-- <div class="button-container">
+                <a href="mailto:jose@pailabs.io" class="button">Contact Us</a>
+            </div> -->
+        </div>
+    </div>
+    <!-- <div class="browser-window2">
+        <div class="browser-header">
+            <div class="browser-buttons">
+                <span class="browser-button blue"></span>
+                <span class="browser-button green"></span>
+                <span class="browser-button yellow"></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="button-container">
+                <a href="mailto:jose@pailabs.io" class="button">Contact Us</a>
+            </div>
+        </div>
+    </div> -->
+    <div class="powered">
+        <p>powered by <a href="/">pai labs</a></p></div>
+    <div class="panda">
+        <a href="/"><img src="../panda.png" alt="panda"></a>
+    </div>
+    <script>
+        function copyToClipboard() {
+            const textToCopy = "npub1u6xq0vfk2d947mpm8na2t86ymus6prhemmgxyh3035yasmruugdqm4zuc8 "; // Replace with your desired text
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                alert('Copied to clipboard: ' + textToCopy);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>  
+</body>
+
+</html>
