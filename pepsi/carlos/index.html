@@ -7,15 +7,24 @@
     <title>Carlos Caorsi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        function generateVCard() {
-            // vCard data in version 3.0 format
-            const vCardData = `BEGIN:VCARD
+        async function generateVCard() {
+            // Convert profile image to base64
+            try {
+                const response = await fetch('/assets/cc.jpg');
+                const blob = await response.blob();
+                const reader = new FileReader();
+                
+                reader.onloadend = function() {
+                    const base64data = reader.result.split(',')[1];
+                    
+                    // vCard data in version 3.0 format with photo and complete address
+                    const vCardData = `BEGIN:VCARD
 VERSION:3.0
 FN:Carlos Caorsi
 N:Caorsi;Carlos;;;
 TITLE:Senior Sales Manager
 ORG:PepsiCo
-ADR;TYPE=WORK:;;Hayward;CA;;;
+ADR;TYPE=WORK:;;29000 Hesperian Blvd;Hayward;CA;94544;United States
 TEL;TYPE=WORK,VOICE:408-593-5988
 EMAIL;TYPE=WORK:carlos.caorsi@pepsico.com
 END:VCARD`;
@@ -38,6 +47,11 @@ END:VCARD`;
             
             // Clean up the temporary URL
             window.URL.revokeObjectURL(url);
+        };
+                reader.readAsDataURL(blob);
+            } catch (error) {
+                console.error('Error generating vCard:', error);
+            }
         }
     </script>
 </head>
