@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Caorsi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function generateVCard() {
+            // vCard data in version 3.0 format
+            const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Carlos Caorsi
+N:Caorsi;Carlos;;;
+TITLE:Senior Sales Manager
+ORG:PepsiCo
+ADR;TYPE=WORK:;;Hayward;CA;;;
+TEL;TYPE=WORK,VOICE:408-593-5988
+EMAIL;TYPE=WORK:carlos.caorsi@pepsico.com
+END:VCARD`;
+
+            // Create a Blob containing the vCard data
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            
+            // Create a temporary URL for the Blob
+            const url = window.URL.createObjectURL(blob);
+            
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'carlos_caorsi.vcf';
+            
+            // Append link to body, click it, and remove it
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Clean up the temporary URL
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen p-4">
+    <div class="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
+        <!-- Profile Section -->
+        <div class="flex flex-col items-center mb-6">
+            <div class="w-24 h-24 rounded-full overflow-hidden mb-4">
+                <img src="/assets/cc.jpg" alt="Pepsi van" class="w-full h-full object-cover"/>
+            </div>
+            <h1 class="text-xl font-bold mb-0.5">Carlos Caorsi</h1>
+            <p class="text-gray-600 text-sm mb-0.5">PepsiCo | Hayward, CA</p>
+            <p class="text-gray-600 text-sm mb-3">Senior Sales Manager</p>
+            
+            <div class="flex gap-2 mb-4">
+                <button class="bg-blue-400 text-white px-4 py-1.5 rounded-md text-sm">
+                    ⬇️ Download Contact
+                </button>
+                <button class="border border-gray-300 p-1.5 rounded-md text-sm">
+                    QR
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Social Media -->
+        <!-- <div class="flex justify-center mb-4">
+            <a href="#" class="text-blue-500">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/>
+                </svg>
+            </a>
+        </div> -->
+
+         <!-- Contact Buttons -->
+         <div class="space-y-2">
+            <a href="tel:408-593-5988" class="w-full bg-black text-white p-3 rounded-2xl flex items-center justify-center gap-2 text-sm no-underline">
+                <span>📱</span> 408-593-5988
+            </a>
+            <a href="mailto:carlos.caorsi@pepsico.com" class="w-full bg-black text-white p-3 rounded-2xl flex items-center justify-center gap-2 text-sm no-underline">
+                <span>✉️</span> carlos.caorsi@pepsico.com
+            </a>
+            <!-- <button class="w-full bg-black text-white p-3 rounded-2xl flex items-center justify-center gap-2 text-sm">
+                <span>🌐</span>
+            </button> -->
+        </div>
+
+        <!-- Footer Navigation -->
+        <div class="flex justify-between items-center mt-6 pt-4 ">
+            <a href="https://www.pailabs.io" class="text-blue-400 text-sm">powered by pai labs</a>
+            <!-- <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                <span class="text-white text-xs">↗️</span>
+            </div>
+            <a href="#" class="text-blue-400 text-sm">NFC Products</a> -->
+        </div>
+    </div>
+</body>
+</html>
