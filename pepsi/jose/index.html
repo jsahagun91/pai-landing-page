@@ -29,7 +29,7 @@
         async function generateVCard() {
             // Convert profile image to base64
             try {
-                const response = await fetch('/assets/pepsi-jose/png');
+                const response = await fetch('/assets/pepsi-jose.png');
                 const blob = await response.blob();
                 const reader = new FileReader();
                 
@@ -118,7 +118,7 @@ END:VCARD`;
         <!-- Profile Section -->
         <div class="flex flex-col items-center mb-6">
             <div class="w-24 h-24 rounded-full overflow-hidden mb-4">
-                <img src="/assets/pepsi-jose/png" alt="Pepsi van" class="w-full h-full object-cover"/>
+                <img src="/assets/pepsi-jose.png" alt="Pepsi van" class="w-full h-full object-cover"/>
             </div>
             <h1 class="text-xl font-bold mb-0.5">Jose Sahagun</h1>
             <p class="text-gray-600 text-sm mb-0.5">PepsiCo | Hayward, CA</p>
